@@ -1,0 +1,417 @@
+{
+  "artists": [
+    {
+      "name": "",
+      "headliner": true,
+      "stage": "Main Stage",
+      "time": "23:00-23:45",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "2Rare",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "15:30-16:00",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Ayra Starr",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "15:30-16:00",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Bktherula",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "16:15-16:45",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Bonez MC & RAF Camora",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "22:15-22:45",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Fireboy DML",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "16:15-16:45",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "JELEEL!",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "21:30-22:00",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "KayCyy",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "20:45-21:15",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Kodak Black",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "21:30-22:00",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Lakeyah",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "20:00-20:30",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "LAYLA",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "19:15-19:45",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Lil Uzi Vert",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "20:45-21:15",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Luh Tyler",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "17:45-18:15",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Mariah the Scientist",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "17:00-17:30",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Meechy Darko",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "17:00-17:30",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "M Huncho",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "17:45-18:15",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Sheck Wes",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "18:30-19:00",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Soulja Boy",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "19:15-19:45",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "TiaCorine",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "18:30-19:00",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Ufo361",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "20:00-20:30",
+      "date": "07.07.2023"
+    },
+    {
+      "name": "Kendrick Lamar",
+      "headliner": true,
+      "stage": "Main Stage",
+      "time": "23:00-23:45",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Chow Lee",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "15:30-16:00",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Xavier Wulf",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "15:30-16:00",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Cochise",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "16:15-16:45",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Central Cee",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "22:15-22:45",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "$not",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "16:15-16:45",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Eddy Baker",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "21:30-22:00",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Kxllswxtch",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "20:45-21:15",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Metro Boomin",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "21:30-22:00",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Hoosh",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "20:00-20:30",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Eem Triplin",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "19:15-19:45",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Luciano",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "20:45-21:15",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Drownmili",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "17:45-18:15",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Lil Durk",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "17:00-17:30",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Night Lovell",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "17:00-17:30",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Glorilla",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "17:45-18:15",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Coi Leray",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "18:30-19:00",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "J.I.D",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "19:15-19:45",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Robb Bank$",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "18:30-19:00",
+      "date": "08.07.2023"
+    },
+    {
+      "name": "Fat Nick",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "20:00-20:30",
+      "date": "08.07.2023"
+    },
+	{
+      "name": "Travis Scott",
+      "headliner": true,
+      "stage": "Main Stage",
+      "time": "23:00-23:45",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Danny Towers",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "15:30-16:00",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Homixide Gang",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "16:15-16:45",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Rae Sremmurd",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "22:15-22:45",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Destroy Lonely",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "16:15-16:45",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "K. Charles",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "21:30-22:00",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Lola Brooke",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "20:45-21:15",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Ski Mask the Slump God",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "21:30-22:00",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Skaiwater",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "20:00-20:30",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Dante YN",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "19:15-19:45",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Gucci Mane",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "20:45-21:15",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Sainté",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "17:45-18:15",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Latto",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "17:00-17:30",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "reezy",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "17:00-17:30",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Lancey Foux",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "17:45-18:15",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Ken Carson",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "18:30-19:00",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Miksu/Macloud",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "19:15-19:45",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Lucki",
+      "headliner": false,
+      "stage": "Secondary Stage",
+      "time": "18:30-19:00",
+      "date": "09.07.2023"
+    },
+    {
+      "name": "Joey Bada$$",
+      "headliner": false,
+      "stage": "Main Stage",
+      "time": "20:00-20:30",
+      "date": "09.07.2023"
+    }
+  ]
+}
