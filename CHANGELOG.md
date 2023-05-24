@@ -14,3 +14,9 @@
 # Verion 0.1.1
     - Added `data.json` and filled up the data
     - Updated `artists.py` with the `__init__` methode
+    
+# Version 0.1.2
+    - Changed `data.json` to `data.csv`
+    - rewrote the __init__ methode
+    - added check_rows and search_artist methode
+    - created check_values methode (not finished yet)
