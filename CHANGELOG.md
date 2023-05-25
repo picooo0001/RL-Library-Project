@@ -20,3 +20,6 @@
     - rewrote the __init__ methode
     - added check_rows and search_artist methode
     - created check_values methode (not finished yet)
+    
+# Version 0.1.3
+    - added check_headliner methode
