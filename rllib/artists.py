@@ -55,7 +55,7 @@ class Artists:
     
     def search_artist(self):
         """Searchs for an artist by user input. It takes the data from the tuple above.
-        Input: name of the artist (typecasting: all together all lowercase)
+        Input: name of the artist (typecasting: everything besides special characters)
         Output: name, headliner, stage, time, date
         """
         
@@ -81,6 +81,41 @@ class Artists:
 
         if not found: #= if found != true
             print("Sorry! We couldn't find what you were looking for!")
+            
+            
+    def search_headliner(self):
+        """Searches for a headliner by user input. It takes the data from the tuple above.
+        Input: "headliner" (typecasting activated)
+        Output: name, time and date
+        """
+        
+        user_input = input("Search Headliner: ")
+        found = False
+        found_indices = []
+
+        if user_input.lower().replace(" ", "") == "headliner":
+            user_input = "true"
+        else:
+            raise RuntimeError("Wrong input. Please redo!")
+        
+        while not found:
+            for index, cell in enumerate(self.headliner):
+                if cell == user_input:
+                    found_indices.append(index)
+
+            for index in found_indices:
+                output = ", ".join([self.artists[index], self.time[index], self.date[index]])
+                print(output)
+                found = True
+
+        if not found:
+            print("Sorry! We couldn't find what you were looking for!")
+        
+            
+        
+            
+            
+         
             
     
         
