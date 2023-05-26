@@ -110,8 +110,32 @@ class Artists:
 
         if not found:
             print("Sorry! We couldn't find what you were looking for!")
-        
             
+            
+    def search_stage(self):
+        """This is a search based on the stage you want to know by user input. It takes the data from 
+        the tuple above.
+        Input: mainstage / secondarystage (typecasting activated)
+        Output: name, date, time"""
+        
+        user_input = input("Search Stage: ")
+        user_input = user_input.replace(" ", "").lower()
+        found_indices = []
+        found = False
+
+        while not found:
+            for index, stage in enumerate(self.stage):
+                formatted_stage = stage.replace(" ", "").lower()
+                if user_input in formatted_stage:
+                    found_indices.append(index)
+
+            for index in found_indices:
+                output = ", ".join([self.artists[index], self.date[index], self.time[index]])
+                print(output)
+                found = True
+
+        if not found:
+            print("Sorry! We couldn't find what you were looking for!")
         
             
             
