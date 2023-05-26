@@ -23,3 +23,8 @@
     
 # Version 0.1.3
     - added check_headliner methode
+
+# Version 0.1.4
+    - added check_stage methode
+    - started working on UI
+    - started working on check_date_time methode
