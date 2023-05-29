@@ -28,3 +28,8 @@
     - added check_stage methode
     - started working on UI
     - started working on check_date_time methode
+
+# Version 0.1.5
+    - finished the basics of the gui (settings and exit button)
+    - implemented the changes into our real class `App`
+    - created a new folder for gui related stuff like pics etc. 
