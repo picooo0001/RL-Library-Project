@@ -9,4 +9,6 @@ __authors__ = [
 ]
 
 from rllib.artists import Artists
+from rllib.app import App
+
 
