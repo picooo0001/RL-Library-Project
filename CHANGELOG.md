@@ -30,6 +30,10 @@
     - started working on check_date_time methode
 
 # Version 0.1.5
-    - finished the basics of the gui (settings and exit button)
+    - finished the basics of the gui (__init__ and exit button)
     - implemented the changes into our real class `App`
     - created a new folder for gui related stuff like pics etc. 
+
+# Version 0.16
+    - implemented a textbox, entry widget and search button for the artist search
+    - connected UI with `search_artists` method -> results will be printed into terminal atm
