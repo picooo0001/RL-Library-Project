@@ -19,7 +19,7 @@ class Artists:
     
         
         try: #checks if the file is openable
-            file_path = "rllib/data.csv"
+            file_path = r"C:\Users\NicoPeuser\Desktop\rlli_tests\RL-Library-Project\rllib\data.csv"
             f = open(file_path, "r")
             reader = csv.reader(f)
         except:
@@ -53,13 +53,13 @@ class Artists:
             raise RuntimeError("Missing collum. Please check!")
             
     
-    def search_artist(self):
+    def search_artist(self, user_input):
         """Searchs for an artist by user input. It takes the data from the tuple above.
         Input: name of the artist (typecasting: everything besides special characters)
         Output: name, headliner, stage, time, date
         """
         
-        user_input = input("Search: ") #requests input from user
+        #user_input = input("Search: ") #requests input from user
         user_input = user_input.replace(" ", "").lower() #typecasting
         found = False 
     

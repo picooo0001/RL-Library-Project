@@ -27,7 +27,6 @@ class App:
         background_label = tk.Label(self.root, bg="black", image = bg_photo) # creates a label for our bg photo
         background_label.place(x=0, y=0, relwidth=1, relheight=1) # places the label at x = 0, y = 0
         background_label.image = bg_photo  #Set the background label as the root window's background
-
     
     def start(self):
         """Methode for executing the code"""
@@ -36,6 +35,14 @@ class App:
     def exit(self):
         """The logic behind the exit button"""
         self.root.quit()
+    
+    def go_button_event(self):
+        """The logic behind the GO button (artist search). """
+        current_entry = self.entry.get() #if go is pressed, the current input is saved in current_entry
+        for i in current_entry: #the entry gets deleted
+            self.entry.delete(0)
+        artists_instance = Artists() #instantiates the Artists class, yes not pretty but it works
+        artists_instance.search_artist(user_input = current_entry) #executes the 'search_artists' method from Artists
         
         
     def quit_button(self):
@@ -55,9 +62,62 @@ class App:
                     )
         exit_button.place(relx = 0.91 , rely= 0.005)
 
+    def textbox_1(self):
+        """Shows what the user should input in the entry field below"""
+        textbox = ctk.CTkTextbox(self.root,
+                         width = 140,
+                         height = 40,
+                         corner_radius= 10,
+                         border_width= 1,
+                         border_color= "white",
+                         fg_color= "#8b3ed7",
+                         bg_color= "#8b3ed7",
+                         text_color="white",
+                         activate_scrollbars= False,
+                         #state = "disabled"
+                         #font= ("Arial")
+                         )
+        textbox.place(relx = 0.2,rely= 0.22)
+        textbox.insert("0.0", "Search your artist:")  # insert at line 0 character 0
+
+    def entry_1(self):
+        """Entry field for the user. You can input the name of your desired artist"""
+        self.entry = ctk.CTkEntry(self.root, 
+                     placeholder_text="Enter your search",
+                     width = 180,
+                     height= 40,
+                     corner_radius = 10,
+                     fg_color = "#985adc",
+                     bg_color="#985adc",
+                     border_width= 1,
+                     border_color= "white",
+                     text_color="white",
+                     ) 
+        self.entry.place(relx = 0.2, rely = 0.3)
+
+    def go_button_1(self):
+        """The design of the GO button for the artist search, the logic can be found in the 'go_button_event'"""
+        go_button = ctk.CTkButton(self.root, 
+                       text="GO", 
+                       width= 40,
+                       height= 40,
+                       corner_radius = 10,
+                       fg_color = "#985adc",
+                       bg_color="#985adc",
+                       border_width= 1,
+                       border_color= "white",
+                       text_color="white",
+                       hover_color="#8912e6",
+                       command= self.go_button_event
+                       )
+        go_button.place(relx = 0.6, rely = 0.3)
+
 
 if __name__ == "__main__":
     app = App() #Add code to create widgets and configure the application logic
-    app.quit_button() #calls the quit_button widget
-    app.start() #calls the start loop
+    app.textbox_1() # creates textbox_1 "search your artist"
+    app.entry_1() # creates entry_1 "Enter your search"
+    app.go_button_1() # creates go_button for Artist search
+    app.quit_button() #creates the quit_button widget
+    app.start() #starts the main loop
     
