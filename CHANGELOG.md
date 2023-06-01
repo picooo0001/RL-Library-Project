@@ -34,6 +34,11 @@
     - implemented the changes into our real class `App`
     - created a new folder for gui related stuff like pics etc. 
 
-# Version 0.16
+# Version 0.1.6
     - implemented a textbox, entry widget and search button for the artist search
     - connected UI with `search_artists` method -> results will be printed into terminal atm
+
+# Version 0.1.7
+    - fixed fatal error in search_artists (we only printed the error instead of returning the result)
+    - created another textbox which prints out the search output from above
+    
