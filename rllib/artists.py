@@ -35,10 +35,10 @@ class Artists:
         self.stage = tuple(stage[2] for stage in reader)
         f.seek(0)
         next(reader)
-        self.date = tuple(date[3] for date in reader)
+        self.date = tuple(date[4] for date in reader)
         f.seek(0)
         next(reader)
-        self.time = tuple(time[4] for time in reader)
+        self.time = tuple(time[3] for time in reader)
         f.seek(0)
         next(reader)
         
@@ -89,24 +89,23 @@ class Artists:
         Input: "headliner" (typecasting activated)
         Output: name, time and date
         """
-        
-        user_input = input("Search Headliner: ")
+    
         found = False
         found_indices = []
-        output = None
-
+        output = ""
+        user_input = "Headliner"
+        
         if user_input.lower().replace(" ", "") == "headliner":
             user_input = "true"
         else:
-            raise RuntimeError("Wrong input. Please redo!")
-        
+            output = "Wrong input. Please redo!"
         while not found:
             for index, cell in enumerate(self.headliner):
                 if cell == user_input:
                     found_indices.append(index)
 
             for index in found_indices:
-                output = ", ".join([self.artists[index], self.time[index], self.date[index]])
+                output += ", ".join([self.artists[index], self.time[index], self.date[index]]) + "\n"
                 found = True
 
         if not found:
@@ -141,6 +140,10 @@ class Artists:
             output = "Sorry! We couldn't find what you were looking for!"
 
         return output
+    
+                
+        
+        
         
             
             
