@@ -59,10 +59,10 @@ class Artists:
         Output: name, headliner, stage, time, date
         """
         
-        #user_input = input("Search: ") #requests input from user
         user_input = user_input.replace(" ", "").lower() #typecasting
         found = False 
-    
+        output = None
+
         for artist in self.artists: #loops over the tuple artists
             formatted_artist = artist.replace(" ", "").lower() #typecasting
             if user_input in formatted_artist:
@@ -76,11 +76,12 @@ class Artists:
                 time = self.time[index]
                 date = self.date[index]
                 output = ", ".join([artist, stage, time, date]) #print the output in one line
-                print(output)
                 found = True #variable form above to true, function ends
 
         if not found: #= if found != true
-            print("Sorry! We couldn't find what you were looking for!")
+            output = "Sorry! We couldn't find what you were looking for "
+        
+        return output
             
             
     def search_headliner(self):
@@ -92,6 +93,7 @@ class Artists:
         user_input = input("Search Headliner: ")
         found = False
         found_indices = []
+        output = None
 
         if user_input.lower().replace(" ", "") == "headliner":
             user_input = "true"
@@ -105,11 +107,12 @@ class Artists:
 
             for index in found_indices:
                 output = ", ".join([self.artists[index], self.time[index], self.date[index]])
-                print(output)
                 found = True
 
         if not found:
-            print("Sorry! We couldn't find what you were looking for!")
+            output = "Sorry! We couldn't find what you were looking for!"
+        
+        return output
             
             
     def search_stage(self):
@@ -122,6 +125,7 @@ class Artists:
         user_input = user_input.replace(" ", "").lower()
         found_indices = []
         found = False
+        output = None
 
         while not found:
             for index, stage in enumerate(self.stage):
@@ -131,11 +135,12 @@ class Artists:
 
             for index in found_indices:
                 output = ", ".join([self.artists[index], self.date[index], self.time[index]])
-                print(output)
                 found = True
 
         if not found:
-            print("Sorry! We couldn't find what you were looking for!")
+            output = "Sorry! We couldn't find what you were looking for!"
+
+        return output
         
             
             
