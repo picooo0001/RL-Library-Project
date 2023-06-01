@@ -40,5 +40,13 @@
 
 # Version 0.1.7
     - fixed fatal error in search_artists (we only printed the error instead of returning the result)
-    - created another textbox which prints out the search output from above
+    - created another textbox which prints out the search artist output from above
+
+# Version 0.1.8
+    - created a search button for the `search_headliner` method, output is in the Frame below
+
+# ToDO
+    - Kommentare überarbeiten und verbessern
+    - Docstrings überarbeiten und verbessern
+    - Farben anpassen und GUI Objekte anpassen
     
