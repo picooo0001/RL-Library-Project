@@ -3,6 +3,7 @@
 from artists import Artists
 import tkinter as tk
 from tkinter import StringVar
+from tkinter import ttk
 import customtkinter as ctk
 from PIL import Image, ImageTk
 
@@ -31,7 +32,12 @@ class App:
 
         self.output_artist_var = StringVar() #stets the StringVar in which we can store out output and print it later
         self.output_headliner_var = StringVar()
+        self.time_var = StringVar()
+
+        self.artists_instance = Artists()
     
+#------------------------------GUI LOGIC AND FUNCTIONS---------------------------------------------#
+
     def start(self):
         """Methode for executing the code"""
         self.root.mainloop() #starts the loop
@@ -45,15 +51,26 @@ class App:
         current_entry = self.artist_entry.get() #if go is pressed, the current input is saved in current_entry
         for i in current_entry: #the entry gets deleted
             self.artist_entry.delete(0)
-        artists_instance = Artists() #instantiates the Artists class, yes not pretty but it works
-        output = artists_instance.search_artist(user_input = current_entry) #executes the 'search_artists' method from Artists
+        #self.artists_instance = Artists() #instantiates the Artists class, yes not pretty but it works
+        output = self.artists_instance.search_artist(user_input = current_entry) #executes the 'search_artists' method from Artists
         self.output_artist_var.set(output) # sets the output_var to the output (result of the search)
 
     def go_button_headliner(self):
         """The logic behind the GO button (headliner search)."""
-        artists_instance = Artists()
-        result = artists_instance.search_headliner()
+        result = self.artists_instance.search_headliner()
         self.output_headliner_var.set(result)
+
+    def go_button_time(self):
+        """The logic behind the GO button (time search)."""
+
+        current_time = self.combobox.get()
+        for i in current_time: #the entry gets deleted
+            self.artist_entry.delete(0)
+        time = self.artists_instance.search_time(user_input=current_time)
+        self.time_var.set(time)
+
+#------------------------------GUI RANDOM---------------------------------------------#
+
 
     def quit_button(self):
         """The button element of the exit function
@@ -72,6 +89,9 @@ class App:
                     command=exit
                     )
         exit_button.place(relx = 0.91 , rely= 0.005)
+
+#------------------------------GUI SEARCH ARTIST---------------------------------------------#
+
 
     def textbox_1(self):
         """Shows what the user should input in the entry field below
@@ -110,7 +130,7 @@ class App:
     def go_button_1(self):
         """The design of the GO button for the artist search, the logic can be found in the 'go_button_event'
         created with custom Tkinter"""
-        go_button = ctk.CTkButton(self.root, 
+        go_button_1 = ctk.CTkButton(self.root, 
                        text="GO", 
                        width= 40,
                        height= 40,
@@ -123,7 +143,7 @@ class App:
                        hover_color="#8912e6",
                        command= self.go_button_artist
                        )
-        go_button.place(relx = 0.8, rely = 0.18)
+        go_button_1.place(relx = 0.8, rely = 0.18)
 
     def textbox_2(self):
         """Prints the results for of our artist search.
@@ -138,7 +158,9 @@ class App:
                          textvariable=self.output_artist_var
                         ) 
         label.place(relx= 0.1, rely= 0.26)
-    
+
+#------------------------------GUI SEARCH HEADLINER---------------------------------------------#
+
     def go_button_2(self):
         """The design of the GO button for the headliner search, the logic can be found in the 'go_button_headliner'
         created with custom Tkinter"""
@@ -155,11 +177,11 @@ class App:
                        hover_color="#8912e6",
                        command= self.go_button_headliner
                        )
-        go_button.place(relx = 0.24, rely = 0.33)
+        go_button.place(relx = 0.18, rely = 0.33)
     
     def textbox_4(self):
         """Prints the results for of our headliner search.
-        Created with Tkinter becuase of the string var"""
+        Created with Tkinter because of the string var"""
         label = tk.Label(self.root, 
                          width=30,
                          height=4,
@@ -169,7 +191,61 @@ class App:
                          anchor="w",
                          textvariable=self.output_headliner_var
                         ) 
-        label.place(relx= 0.1, rely= 0.41)
+        label.place(relx= 0.03, rely= 0.41)
+
+#------------------------------GUI DATE/TIME STAGE---------------------------------------------#
+
+    def combobox(self):
+        self.combobox = ctk.CTkComboBox(self.root,
+                                width=120,
+                                height=40,
+                                corner_radius= 10,
+                                values = self.artists_instance.time,
+                                bg_color="#9651db",
+                                fg_color="#8b3ed7",
+                                border_color="white",
+                                border_width=1,
+                                button_color="#8b3ed7",
+                                button_hover_color="#8912e6",
+                                dropdown_fg_color = "#8b3ed7",
+                                dropdown_hover_color = "#8912e6",
+                                state = "readonly",
+                                variable= self.time_var
+                                )
+        self.combobox.place(relx= 0.55, rely = 0.33)
+
+    def go_button_3(self):
+        """The design of the GO button for the artist search, the logic can be found in the 'go_button_event'
+        created with custom Tkinter"""
+        go_button_2 = ctk.CTkButton(self.root, 
+                       text="GO", 
+                       width= 40,
+                       height= 40,
+                       corner_radius = 10,
+                       fg_color = "#8b3ed7",
+                       bg_color="#8b3ed7",
+                       border_width= 1,
+                       border_color= "white",
+                       text_color="white",
+                       hover_color="#8912e6",
+                       command= self.go_button_time
+                       )
+        go_button_2.place(relx = 0.8, rely = 0.33)
+
+    def textbox_5(self):
+        """Prints the results for of our time search.
+        Created with Tkinter because of the string var"""
+        label = tk.Label(self.root, 
+                         width=30,
+                         height=7,
+                         fg="white",
+                         relief="ridge",
+                         bg = "#a27de2",
+                         anchor="w",
+                         justify="left",
+                         textvariable=self.time_var
+                        ) 
+        label.place(relx= 0.5, rely= 0.41)
 
 
 
@@ -178,9 +254,12 @@ if __name__ == "__main__":
     app.textbox_1() # creates textbox_1 "search your artist"
     app.textbox_2() #creates textbox_2 result of search
     app.textbox_4() #creates textbox_4 result of search
+    app.textbox_5() #creates textbox_5 result of search
     app.entry_1() # creates entry_1 "Enter your search"
     app.go_button_1() # creates go_button for Artist search
     app.go_button_2() #creates go_button for Headliner search
+    app.go_button_3() # creates go_button for Time search
     app.quit_button() #creates the quit_button widget
+    app.combobox() # creates a dropdown menu for the timespans
     app.start() #starts the main loop
     

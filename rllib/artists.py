@@ -141,7 +141,28 @@ class Artists:
 
         return output
     
-                
+    def search_time(self, user_input):
+        """This is a search, based on the time by user input. It takes the data from the tuple above.
+        Input: timespan (through GUI)
+        output: Date, Artist and Stage"""
+
+        found_indices = []
+        found = False
+        output = ""
+
+        while not found:
+            for index, time_span in enumerate(self.time):
+                if time_span in user_input:
+                    found_indices.append(index)
+
+            for index in found_indices:
+                output += ", ".join([self.date[index], self.artists[index], self.stage[index]]) + "\n"
+                found = True
+
+            if not found:
+                output = "Sorry! We couldn't find what you were looking for!"
+                print(output)
+        return output       
         
         
         
