@@ -45,6 +45,11 @@
 # Version 0.1.8
     - created a search button for the `search_headliner` method, output is in the Frame below
 
+# Version 0.1.9
+    - created the `search_time` method
+    - created a combobox with the existing timespans, a search button and a label which returns the result
+    
+
 # ToDO
     - Kommentare überarbeiten und verbessern
     - Docstrings überarbeiten und verbessern
