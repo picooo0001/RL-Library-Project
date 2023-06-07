@@ -1,0 +1,9 @@
+Features,Weekend GA,Weekend GA+,Weekend VIP,Weekend Munchies,Friday,Friday VIP,Saturday,Saturday VIP,Sunday,Sunday VIP
+single_day,False,False,False,False,True,True,True,True,True,True
+incl_merch,False,True,False,True,False,False,False,False,False,False
+fast_lane,False,True,True,True,False,True,False,True,False,True
+sep_toilets,False,False,True,True,False,True,False,True,False,True
+vip_area,False,False,True,True,False,True,False,True,False,True
+below_100,False,False,False,False,True,False,True,False,True,False
+below_200,False,False,False,False,True,True,True,True,True,True
+below_300,True,True,False,False,True,True,True,True,True,True
