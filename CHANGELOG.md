@@ -48,10 +48,23 @@
 # Version 0.1.9
     - created the `search_time` method
     - created a combobox with the existing timespans, a search button and a label which returns the result
+
+# Version 0.2.0
+    - added `tickets.csv`
+    - created `tickets.py` (Ticket Class)
+    - started on working to code a ticket selection system based on the `tickets.csv`
+
+# Version 0.2.1
+    - added `catch_userinput` and `search_tickets` methods to the tickets class
+    - created toplevel window in gui for ticket selection
+    - connected logic with gui elements and made them fit
+    - updated `requirements.txt`
+    - reworked comments and docstrings
+    - reworked `README.md`
     
 
 # ToDO
-    - Kommentare überarbeiten und verbessern
-    - Docstrings überarbeiten und verbessern
-    - Farben anpassen und GUI Objekte anpassen
+
+ 
+
     
