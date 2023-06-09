@@ -4,6 +4,6 @@ With this library, you can look up all important data for your Rolling Loud visi
 
 ## Common errors:
     - not installed all requirements. check requirements.txt
-    - change the path of the images and .csv files if a RuntimeError will be raised
+    - change the path of the images and .csv files if a RuntimeError occurs (use relative path)
 
 
