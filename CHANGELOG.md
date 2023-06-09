@@ -62,6 +62,8 @@
     - reworked comments and docstrings
     - reworked `README.md`
     
+# Version 0.2.2
+    - resized logo image
 
 # ToDO
 
