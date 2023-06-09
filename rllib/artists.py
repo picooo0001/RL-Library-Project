@@ -40,7 +40,34 @@ class Artists:
         self.time = tuple(time[3] for time in reader)
         f.seek(0)
         next(reader)
-        
+
+    def __len__(self): #not very usefull, implemented before we had a proper plan, same goes for __getitem__
+        """Returns the number of artists"""
+        return len(self.artists)
+    
+    def __getitem__(self, index):
+        """Returns the artist details at the provided index"""
+        artist = self.artists[index]
+        headliner = self.headliner[index]
+        stage = self.stage[index]
+        date = self.date[index]
+        time = self.time[index]
+        return {
+            'artist': artist,
+            'headliner': headliner,
+            'stage': stage,
+            'date': date,
+            'time': time
+        }
+
+    def check_rows(self):
+        """Checks if all rows are complete. If this is not the case, a RuntimeError will be raised."""
+        if len(self) == 59:
+            pass
+        else:
+            raise RuntimeError("Missing column. Please check!")
+
+      
     def check_rows(self):
         """Checks if all rows are complete. If this is not the case, a RuntimeError will appear.
         The number 59 is predefined"""

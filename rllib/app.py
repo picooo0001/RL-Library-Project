@@ -19,16 +19,21 @@ class App:
         In this method, we also define all our StringVars and instances from other classes"""
 
         self.root = tk.Tk() #sets a new tk instance named root
-        self.root.title("Rolling Loud Munich App") # changes the title
-        self.root.geometry("482x603") # defines the size of the window
-        self.root.resizable(False, False) # defones that you cant maximize the window
+        self.root.title("Rolling Loud Munich App") #changes the title
+        self.root.geometry("482x603") #defines the size of the window
+        self.root.resizable(False, False) #defines that you cant maximize the window
         
         #loads the background image
         bg_image = Image.open(r"RL-Library-Project\rllib\gui_stuff\rl_germany.png")
         bg_photo = ImageTk.PhotoImage(bg_image)
         
-        logo_image = tk.PhotoImage(file=r"RL-Library-Project\rllib\gui_stuff\rl_logo.png") #file path for logo image
+        logo_image = Image.open(r"RL-Library-Project\rllib\gui_stuff\rl_logo.png") #file path for logo image
+        logo_width = 32
+        logo_height = 32
+        logo_image = logo_image.resize((logo_width, logo_height), Image.ANTIALIAS) #resizes the logo photo
+        logo_image = ImageTk.PhotoImage(logo_image)
         self.root.iconphoto(True, logo_image) #changes the logo
+
         background_label = tk.Label(self.root, bg="black", image = bg_photo) #creates a label for our bg photo
         background_label.place(x=0, y=0, relwidth=1, relheight=1) #places the label at x = 0, y = 0
         background_label.image = bg_photo  #sets the background label as the root window's background
