@@ -69,7 +69,8 @@
     - added `paths.json` for a better file structure overview
     - changed logo image
 
-# ToDO
+# Version 0.2.4
+    - edited all files with black
 
  
 
