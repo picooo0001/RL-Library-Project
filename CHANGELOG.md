@@ -65,6 +65,10 @@
 # Version 0.2.2
     - resized logo image
 
+# Version 0.2.3
+    - added `paths.json` for a better file structure overview
+    - changed logo image
+
 # ToDO
 
  
