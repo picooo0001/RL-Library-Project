@@ -25,7 +25,7 @@ class App:
             with open(
                 r"RL-Library-Project\rllib\paths.json"
             ) as p:  # no seperate method which can be called in the other classes as well because, we would have had to wirte the function after we checked it file
-                paths = json.load(p)
+                self.paths = json.load(p)
         except:
             raise RuntimeError(
                 "The paths.json file could not been opened. Please check!"
@@ -37,11 +37,11 @@ class App:
         self.root.resizable(False, False)  # defines that you cant maximize the window
 
         # loads the background image
-        bg_image = Image.open(paths["link_collection"][3]["links"][0])
+        bg_image = Image.open(self.paths["link_collection"][3]["links"][0])
         bg_photo = ImageTk.PhotoImage(bg_image)
 
         logo_image = Image.open(
-            paths["link_collection"][4]["links"][0]
+            self.paths["link_collection"][4]["links"][0]
         )  # file path for logo image
         logo_width = 32
         logo_height = 32
@@ -367,7 +367,7 @@ class App:
         self.second_window.geometry("300x600")  # sets geometry
         self.second_window.resizable(False, False)  # not resizable
         toplevel_bg_image = Image.open(
-            r"RL-Library-Project\rllib\gui_stuff\rl_germany.png"
+            self.paths["link_collection"][3]["links"][0]
         )
         toplevel_bg_photo = ImageTk.PhotoImage(toplevel_bg_image)
         background_label = tk.Label(
