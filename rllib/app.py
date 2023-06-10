@@ -1,6 +1,7 @@
 """Modelling the GUI of the app for a better user experience.
 With the use of the popular third party library named Tkinter, aswell as customtkinter for a smoother design"""
 
+import json
 from tickets import Tickets
 from artists import Artists
 import tkinter as tk
@@ -16,7 +17,14 @@ class App:
     def __init__(self):
         """Initializes the GUI basics to make this app usable.
         Basic are things like: instance, title, geometry, resizable(bool), path to important images, logo
-        In this method, we also define all our StringVars and instances from other classes"""
+        In this method, we also define all our StringVars and instances from other classes
+        Checks if the `path.json` file is accessable"""
+
+        try: #checks if the file is openable
+            with open(r'RL-Library-Project\rllib\paths.json') as p: #no seperate method which can be called in the other classes as well because, we would have had to wirte the function after we checked it file
+                paths = json.load(p)
+        except:
+            raise RuntimeError("The paths.json file could not been opened. Please check!")
 
         self.root = tk.Tk() #sets a new tk instance named root
         self.root.title("Rolling Loud Munich App") #changes the title
@@ -24,10 +32,10 @@ class App:
         self.root.resizable(False, False) #defines that you cant maximize the window
         
         #loads the background image
-        bg_image = Image.open(r"RL-Library-Project\rllib\gui_stuff\rl_germany.png")
+        bg_image = Image.open(paths["link_collection"][3]["links"][0])
         bg_photo = ImageTk.PhotoImage(bg_image)
         
-        logo_image = Image.open(r"RL-Library-Project\rllib\gui_stuff\rl_logo.png") #file path for logo image
+        logo_image = Image.open(paths["link_collection"][4]["links"][0]) #file path for logo image
         logo_width = 32
         logo_height = 32
         logo_image = logo_image.resize((logo_width, logo_height), Image.ANTIALIAS) #resizes the logo photo

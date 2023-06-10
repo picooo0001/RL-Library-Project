@@ -1,18 +1,25 @@
 """Modelling the ticket categories of the festival"""
 
 import csv
+import json
 
 class Tickets:
     """Class of the different ticket categories, which are up for sale for Rolling Loud Munich"""
 
     def __init__(self):
-        """Checks if tickets.csv file is accessable.
+        """Checks if paths.json and tickets.csv file is accessable.
         Initializes the different ticket categories based on the `tickets.csv`
         There will also be a list `all_tickets`, which is initialized"""
-        
+
         try: #checks if the file is openable
-            file_path = r"RL-Library-Project\rllib\tickets.csv"
-            f = open(file_path, "r")
+            with open(r'RL-Library-Project\rllib\paths.json') as p:
+                paths = json.load(p)
+        except:
+            raise RuntimeError("The paths.json file could not been opened. Please check!")
+
+        try: #checks if the file is openable
+            file_path = paths["link_collection"][0]["links"][0]
+            f = open(file_path, 'r')
             reader = csv.reader(f)
         except:
             raise RuntimeError("The data.csv file could not been opened. Please check!")

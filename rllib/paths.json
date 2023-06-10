@@ -1,0 +1,36 @@
+
+{
+    "link_collection": [
+      {
+        "name": "tickets.csv",
+        "links": [
+          "RL-Library-Project\\rllib\\tickets.csv"
+        ]
+      },
+      {
+        "name": "data.csv",
+        "links": [
+          "RL-Library-Project\\rllib\\data.csv"
+        ]
+      },
+      {
+        "name": "data.csv",
+        "links": [
+          "RL-Library-Project\\rllib\\data.csv"
+        ]
+      },
+      {
+        "name": "rl_germany.png",
+        "links": [
+          "RL-Library-Project\\rllib\\gui_stuff\\rl_germany.png"
+        ]
+      },
+      {
+        "name": "rl_logo.png",
+        "links": [
+          "RL-Library-Project\\rllib\\gui_stuff\\rl_logo_2.png"
+        ]
+      }
+    ]
+  }
+  

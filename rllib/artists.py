@@ -1,13 +1,14 @@
 """"Modelling the artists of the festival"""
 
 import csv
+import json
 
 class Artists:
     """Class of the artists who are performing at Rolling Loud Munich
     The data of the artists is saved in `data.csv`"""
     
     def __init__(self):
-        """Checks if the `data.csv` file is accessable and initialization of the args
+        """Checks if the `data.csv` and `paths.csv` file is accessable and initialization of the args
         
         Args:
             name: name of the artist
@@ -16,10 +17,15 @@ class Artists:
             date: DD.MM.YYYY of when the artist is on stage
             time: the timespan for every artist on stage"""
     
-        
         try: #checks if the file is openable
-            file_path = r"C:\Users\NicoPeuser\Desktop\rlli_tests\RL-Library-Project\rllib\data.csv"
-            f = open(file_path, "r")
+            with open(r'RL-Library-Project\rllib\paths.json') as p:
+                paths = json.load(p)
+        except:
+            raise RuntimeError("The paths.json file could not been opened. Please check!")
+
+        try: #checks if the file is openable
+            file_path = paths["link_collection"][1]["links"][0]
+            f = open(file_path, 'r')
             reader = csv.reader(f)
         except: #raises error if not, so the GUI wont open at all
             raise RuntimeError("The data.csv file could not been opened. Please check!")
