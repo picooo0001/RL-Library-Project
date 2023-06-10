@@ -8,9 +8,9 @@ __authors__ = [
     "Nico Peuser",
 ]
 
-from rllib.artists import Artists
-from rllib.app import App
-from rllib.tickets import Tickets
+from artists import Artists
+from app import App
+from tickets import Tickets
 
 if __name__ == "__main__":
     app = App()  # instantiates the App class
