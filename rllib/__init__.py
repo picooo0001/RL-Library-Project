@@ -1,6 +1,6 @@
 """A Rolling Loud Munich organization library for visitors"""
 
-__version__ = "0.2.3"
+__version__ = "0.2.4"
 __authors__ = [
     "Tarek Al Ashraf",
     "Oktay Durururururururur",
